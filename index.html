@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>AltNumber</title>
+    <title>AltNumber</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="/libraries/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
 
-<!-- Font Awesome -->
-<!-- <link rel="stylesheet" href="/libraries/font-awesome-4.4.0/css/font-awesome.min.css">-->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/libraries/bootstrap-3.3.5-dist/css/bootstrap.min.css">
 
-<!-- jQuery -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/libraries/font-awesome-4.4.0/css/font-awesome.min.css">
 
-
-
-</head>
-<body>
-<div class="well">
-<h1>Search For A Number</h1>
-<div class="input-group">
-  <input type="text" class="form-control" placeholder="Telephone Number" id="phoneNoS">
-</div>
-<div id="results">
-
-</div>
-<script type="text/javascript" src="js/custom.js"></script>
-</body>
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <div class="text-center">
+      <div class="large-font">
+        <i class="fa fa-search"></i>
+      </div>
+      <h1 class="medium-font no-margin-top">Search For A Number</h1>
+      <div class="input-group center-margin spacing-bottom">
+        <input type="text" class="form-control" placeholder="Telephone Number" id="phoneNo" maxlength="13">
+      </div>
+      <div id="results" class="well">
+      </div>
+    </div>
+    <script type="text/javascript" src="js/custom.js"></script>
+  </body>
 </html>
