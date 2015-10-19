@@ -12,11 +12,14 @@ $( document ).ready(function() {
     $('#phoneNo').keyup(function() {
       var dInput = this.value;
 
+      console.log(dInput.length);
+
       // Check if 0870 number.
       if (dInput.indexOf("0870") >= 0) {
 
         $('#results').empty();
         console.log("0870 detected.");
+
 
         // Check if length is greater than 4
         if (dInput.length >= 12 && dInput.length <= 13) {
@@ -38,7 +41,8 @@ $( document ).ready(function() {
             }
             var free_phone_numbers = list_of_fields.field_free_phone;
             $.each( free_phone_numbers, function( key, value ) {
-              $( "<p>" + value + "</p>" ).appendTo( "#results" );
+              // $( "<p>" + value + "</p>" ).appendTo( "#results" );
+              $( '<a href="tel:' + value + '"><p>' + value + '</p></a>' ).appendTo( "#results" );
               //console.log(formatted_free_numbers);
             });
           });
