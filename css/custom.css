@@ -1,0 +1,22 @@
+/*
+* Custom CSS
+*
+*/
+.large-font {
+  font-size: 3em;
+}
+.medium-font {
+  font-size: 2em;
+}
+.small-font {
+  font-size: 1em;
+}
+.center-margin {
+  margin: 0 auto;
+}
+.no-margin-top {
+  margin-top: 0;
+}
+.spacing-bottom {
+  margin-bottom: 1em;
+}
