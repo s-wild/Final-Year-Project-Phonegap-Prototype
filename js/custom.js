@@ -1,29 +1,47 @@
-
-
-
-// A $( document ).ready() block.
+/*
+* Custom jQuery scripts.
+* This script is for data snychronisation.
+*/
 $( document ).ready(function() {
     console.log( "ready!" );
-    $( document ).on( "vclick", ".SeeMore2", function() {
-      console.log("it's working");
-      $(this).hide();
-      (function() {
-    var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-    $.getJSON( flickerAPI, {
-      tags: "mount rainier",
-      tagmode: "any",
-      format: "json"
-    })
-      .done(function( data ) {
-        $.each( data.items, function( i, item ) {
-          $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-          if ( i === 3 ) {
-            return false;
-          }
+
+    // get value of telephone number input box on key up.
+    $('#phoneNoS').keypress(function() {
+      var dInput = this.value;
+      if (dInput.length > 4) {
+        console.log("freephone");
+      }
+      console.log(dInput);
+
+      // Example for natwest http://up637415.co.uk/node.json?field_free_phone=0800 200400
+
+      // jQuery JSON.
+      var freeAlternativeAPI = "http://up637415.co.uk/node.json?field_free_phone=" + dInput;
+      $.getJSON( freeAlternativeAPI, function( data ) {
+        dataString = JSON.stringify(data);
+        console.log("Data:::::" + dataString);
+        var items = JSON.parse(dataString);
+
+        $(items).each(function(){
+
         });
+
+        // $.each( data, function( key, val ) {
+        //   console.log("Val:::::" + val);
+        //   console.log("Key:::::" + key);
+        // });
+        // $( "<ul/>", {
+        //   "class": "my-new-list",
+        //   html: items.join( "" )
+        // }).appendTo( "#response-text" );
       });
-  })();
     });
 
+    $( document ).on( "vclick", ".SeeMore2", function() {
+    // $(this).hide();
+
+
+
+    });
 
 });
