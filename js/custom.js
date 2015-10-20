@@ -17,6 +17,8 @@ $( document ).ready(function() {
 
       console.log(dInput.length);
 
+      $("#phoneNo").inputmask('remove');
+
       // Check if 0870 number.
       if (dInput.indexOf("0870") >= 0) {
 
@@ -51,8 +53,6 @@ $( document ).ready(function() {
               //console.log(formatted_free_numbers);
             });
           });
-        }else {
-          $('#results').hide();
         }
         console.log(dInput);
 
