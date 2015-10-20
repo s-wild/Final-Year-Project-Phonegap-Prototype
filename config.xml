@@ -15,6 +15,7 @@
     </author>
 
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="permissions" value="none"/>
     <gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />
 
 </widget>
