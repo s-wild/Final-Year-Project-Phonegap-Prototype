@@ -17,12 +17,14 @@ $( document ).ready(function() {
       // Check if 0870 number.
       if (dInput.indexOf("0870") >= 0) {
 
+        $('#phoneNo').inputmask('9999 999 9999');
+
         $('#results').empty();
         console.log("0870 detected.");
 
 
         // Check if length is greater than 4
-        if (dInput.length >= 12 && dInput.length <= 13) {
+        if (dInput.length == 13) {
 
           // jQuery JSON.
           var freeAlternativeAPI = "http://up637415.co.uk/node.json?field_premium_number=" + dInput;
