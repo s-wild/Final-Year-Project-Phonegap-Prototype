@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="uk.co.freealternative.phone_search" version="0.0.1">
+        <name>Alt Phone</name>
+        <description>
+            A web application that allows user to search for free alternative numbers.
+        </description>
+        <author email="up637415@myport.ac.uk" href="http://up637415.co.uk">
+            UP637415
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+        <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+        <preference name="Orientation" value="portrait" />
+    </widget>
