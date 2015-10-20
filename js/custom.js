@@ -5,6 +5,9 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    // Focus input box on load.
+    $('#phoneNo').focus();
+
     // On load, hide result div (not needed).
     $('#results').hide();
 
