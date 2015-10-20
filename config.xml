@@ -14,6 +14,7 @@
        PhoneGap Team
     </author>
     <access origin="*" />
+    <gap:platform name="android" />
     <preference name="permissions" value="none"/>
     <gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />
 
